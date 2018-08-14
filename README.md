@@ -39,7 +39,7 @@ cookiecutter https://github.com/NSLS-II/suitcase-cookiecutter
 
 ## Guidelines
 
-* Suitcase supports Python 3.5+ only.
+* Suitcase supports Python 3.6+ only.
 * Suitcase subpackages should include tests but they should *not* include binary
   files for testing. The tests should generate (and then clean up) any files
   that they need for testing.
