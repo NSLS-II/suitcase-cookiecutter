@@ -6,7 +6,7 @@ import json
 import unittest
 from typing import List
 
-suitcase=None
+suitcase = None
 
 
 class TestRheology(unittest.TestCase):
@@ -15,7 +15,6 @@ class TestRheology(unittest.TestCase):
         """Generate test files and headers"""
         self.paths = []
         self.header = {}
-        pass
 
     def test_forward_rheology(self):
         """
@@ -39,7 +38,6 @@ class TestRheology(unittest.TestCase):
 
         assert post_transform_checksum == pre_transform_checksum
 
-
     def test_reverse_rheology(self):
         """
         Translate from an Event Model header to a native format; check that reversing the translation gives back an Event
@@ -62,21 +60,21 @@ class TestRheology(unittest.TestCase):
         assert pre_transform_checksum == post_transform_checksum
 
 
-def hash_files(paths:List[str]):
+def hash_files(paths: List[str]):
     """
     MD5 checksum a list of file paths
     """
-    return map(hash_file,paths)
+    return map(hash_file, paths)
 
 
-def hash_file(path:str):
+def hash_file(path: str):
     """
     MD5 checksum a file
     """
-
     return hashlib.md5(path).hexdigest()
 
-def hash_dict(d:dict)->str:
+
+def hash_dict(d: dict) -> str:
     return hashlib.md5(json.dumps(d, sort_keys=True)).hexdigest()
 
 
