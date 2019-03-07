@@ -53,8 +53,7 @@ def export(gen, directory, file_prefix='{uid}-', **kwargs):
     Returns
     -------
     artifacts : dict
-        dict mapping the 'labels' to lists of file names (or, in general,
-        whatever resources are produced by the Manager)
+        Maps 'labels' to lists of artifacts (e.g. filepaths)
 
     Examples
     --------
